@@ -1,0 +1,64 @@
+---
+---
+@import "{{ site.theme }}";
+
+/* ====== Global tweaks ====== */
+:root {
+  --brand: #1f6feb;         /* link/button color */
+  --ink: #111;
+  --muted: #666;
+  --card: #ffffff;
+  --border: #e6e6e6;
+  --bg: #fafafa;
+}
+body {
+  color: var(--ink);
+  background: var(--bg);
+}
+h1, h2, h3 { letter-spacing: -0.2px; }
+p { line-height: 1.7; }
+
+/* ====== Hero ====== */
+.hero {
+  text-align: center;
+  margin: 1.5rem 0 2rem;
+}
+.hero h1 { font-size: 2.2rem; margin-bottom: .25rem; }
+.hero h1 span { background: linear-gradient(transparent 70%, #fff3a5 0); }
+.hero .tagline { color: var(--muted); margin: 0 auto .8rem; max-width: 42rem; }
+
+.quick-links { display: inline-flex; gap: .5rem; flex-wrap: wrap; }
+
+/* ====== Buttons ====== */
+.btn {
+  display: inline-block;
+  padding: .5rem .8rem;
+  border-radius: .6rem;
+  border: 1px solid var(--border);
+  text-decoration: none;
+  background: var(--card);
+  transition: transform .05s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.btn:hover { transform: translateY(-1px); box-shadow: 0 4px 14px rgba(0,0,0,.06); border-color: #dcdcdc; }
+.btn-ghost { background: transparent; }
+
+/* ====== Grid cards ====== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat( auto-fit, minmax(260px, 1fr) );
+  gap: 1rem;
+  margin: 1rem 0 1.5rem;
+}
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  padding: 1rem 1.1rem;
+  box-shadow: 0 1px 0 rgba(0,0,0,.02);
+}
+.card h3 { margin: 0 0 .25rem; font-size: 1.05rem; }
+.card p { margin: 0 0 .6rem; color: var(--muted); }
+.card .meta { font-size: .85rem; color: var(--muted); margin-bottom: .6rem; }
+
+/* ====== Avatar (if using `logo:`) ====== */
+.site-header .site-logo { border-radius: 50%; border: 1px solid var(--border); }
